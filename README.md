@@ -7,7 +7,7 @@ Rommy Gierdhan Pratama:
 * http://instagram.com/rommygierdhan
 * http://twitter.com/rommygierdhan
 
-Fork it: https://github.com/captive-portal-simple
+Fork it: https://github.com/Kiss-shot-Acerola-orion-Heart-Under-Blade
 
 # Using captive-portal-simple
 
