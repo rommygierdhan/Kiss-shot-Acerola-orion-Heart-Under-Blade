@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Internet Login | dePaviljoen Bandung </title>
+<link rel="shortcut icon" href="data/logo1.png" />
+<!-- Bootstrap core CSS -->
+<link href="assets/css/bootstrap.css" rel="stylesheet">
+
+<!-- Custom CSS -->
+<link href="assets/css/main.css" rel="stylesheet">
+<link href="assets/css/font-awesome.min.css" rel="stylesheet">
+<link href="assets/css/animate-custom.css" rel="stylesheet">
+<script src="assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/modernizr.custom.js"></script>
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+	<script type="text/javascript">
+	$(function(){
+	$('#checkbox').click(function(){
+		if ($(this).is(':checked')){
+		$('#loginbtn').prop('disabled',false);
+		}else {
+		$('#loginbtn').prop('disabled',true);
+		}
+	});
+	});
+	</script>
+	
+	</head>
+
+<body data-spy="scroll" data-offset="0" data-target="#navbar-main">
+$(if chap-id)
+  <form name="sendin" action="$(link-login-only)" method="post">
+    <input type="hidden" name="username" />
+    <input type="hidden" name="password" />
+    <input type="hidden" name="dst" value="$(link-orig)" />
+    <input type="hidden" name="popup" value="true" />
+  </form>
+  
+  <script type="text/javascript" src="md5.js"></script>
+  <script type="text/javascript">
+  <!--
+      function doLogin() {
+    document.sendin.username.value = document.login.username.value;
+    document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+    // document.sendin.password.value =document.login.password.value;
+    document.sendin.submit();
+    return false;
+      }
+  //-->
+  </script>
+$(endif)
+<div id="navbar-main"> 
+  <!-- Fixed navbar -->
+  <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> -->
+        <a class="navbar-brand" href="#home"><img src="data/logo.png" class="img-responsive" style="margin-top: -25px;" /></a> </div>
+      <!-- <div class="navbar-collapse collapse"> -->
+        <!--<ul class="nav navbar-nav navbar-right">
+          <li><a href="login.html"></a></li>
+          <li><a href="newsletter.html"></a></li>
+        </ul>-->
+      <!-- </div> -->
+      <!--/.nav-collapse --> 
+    </div>
+  </div>
+</div>
+
+<!-- ==== HEADERWRAP ==== -->
+<div id="headerwrap" name="home">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 col-md-offset-7">
+      	<div>
+
+      	  <!-- Nav tabs -->
+      	  <ul class="nav nav-tabs" role="tablist">
+      	    <li role="presentation" class="active"><a href="#inhouseguest" aria-controls="inhouseguest" role="tab" data-toggle="tab">Internet Access</a></li>
+      	    <!-- <li role="presentation"><a href="#visitor" aria-controls="visitor" role="tab" data-toggle="tab">Visitor</a></li> -->
+      	  </ul>
+
+      	  <!-- Tab panes -->
+      	  <div class="tab-content">
+      	    <div role="tabpanel" class="tab-pane active" id="inhouseguest">
+      	    	<form id="contact" action="$(link-login-only)" name="login" method="post" class="form" role="form"
+      	    	  $(if chap-id) $(endif)>
+      	    	  <input type="hidden" name="dst" value="$(link-orig)" />
+      	    	  <input type="hidden" name="popup" value="true" />
+      	    	  <h5>Please login to enjoy our Internet Service</h5>
+      	    	  <!-- $(if trial == 'yes')Free trial available, <a style="color: #281f62"href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)">click here</a>.$(endif) -->
+      	    	  <br />
+      	    	  <div class="row">
+      	    	    <div class="col-xs-12 col-md-12 form-group">
+      	    	      <input class="form-control" id="username" name="username" placeholder="Username " type="text" required value="$(username)" />
+      	    	      <!-- <input class="form-control" id="username" name="username" placeholder="Enter Room No. " type="text" required /> -->
+      	    	    </div>
+      	    	    <div class="col-xs-12 col-md-12 form-group">
+      	    	      <!-- <input class="form-control" id="email" name="email" placeholder="Email " type="text" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" /> -->
+      	    	      <!-- <input id="email" name="password" placeholder="Password" type="hidden" required /> -->
+      	    	    <input class="form-control" id="password" name="password" placeholder="Password" type="password" required />
+					</div>
+      	    	  </div>
+				  <!-- <div id="login-text">
+					<label class="label-terms">
+                    <input name="checkbox" type="checkbox" id="checkbox"/>
+                    I have read and agree with the <a href="terms-and-condition.html" target="_blank">terms and conditions</a>
+					</label>
+				  </div> -->
+      	    	  <div class="row">
+      	    	    <div class="col-xs-12 col-md-12">
+      	    	      <!-- <button class="btn btn btn-lg" id="loginbtn" disabled="disabled" type="submit">Log In</button><br /><br /> -->
+					  <button class="btn btn btn-lg" type="submit">Log In</button><br /><br />
+      	    	      $(if error)                $(error)              $(endif)
+					  <br>
+					  <h5 style="color: rgb(0,0,0)">Don't have an account? Please try to login using Social Media</h5>
+						
+							<a href="http://login.centrin.net.id/depaviljoen/" target="_blank">
+							<img class="img" src="images/socmed-fb.png" height="50" width="50">
+							
+							<a href="http://login.centrin.net.id/depaviljoen/" target="_blank">
+							<img class="img" src="images/socmed-twttr.png" height="50" width="50">
+							
+							<a href="http://login.centrin.net.id/depaviljoen/" target="_blank">
+							<img class="img" src="images/socmed-ig.png" height="50" width="50">
+							
+							<a href="http://login.centrin.net.id/depaviljoen/" target="_blank">
+							<img class="img" src="images/socmed-gplus.png" height="50" width="50" border="0">
+							</a>
+					  </br>
+      	    	    </div>
+      	    	  </div>
+      	    	</form>
+      	    </div>
+      	  </div>
+
+      	</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /headerwrap --> 
+
+            
+<div id="footerwrap">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        dePaviljoen Bandung <br />
+        Jl. R.E. Martadinata 68 Bandung <br />
+		West Java, Indonesia 40115 <br />
+		Telp. +62 22 8601 2888
+      </div>
+      <!-- <div class="col-md-4">
+        <ul class="list-inline social-buttons">
+          <li><a href="https://twitter.com/NovotelBandung"><i class="fa fa-twitter"></i></a> </li>
+          <li><a href="https://www.facebook.com/novotel.bandung/"><i class="fa fa-facebook"></i></a> </li>
+          <li><a href="https://plus.google.com/+novotel"><i class="fa fa-google-plus"></i></a> </li>
+        </ul>
+      </div> -->
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap core JavaScript
+    ================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+
+<script type="text/javascript" src="assets/js/bootstrap.min.js"></script> 
+<script type="text/javascript" src="assets/js/retina.js"></script> 
+<script type="text/javascript" src="assets/js/jquery.easing.1.3.js"></script> 
+<script type="text/javascript" src="assets/js/smoothscroll.js"></script> 
+<script type="text/javascript" src="assets/js/jquery-func.js"></script>
+<script type="text/javascript" src="assets/js/jquery.backstretch.min.js"></script>
+<script type="text/javascript" src="assets/js/scripts.js"></script>
+<!-- <script type="text/javascript">
+  $(function() {
+    $('#contact').submit(function(e) {
+      e.preventDefault();
+      $.ajax({
+        url: 'http://novotel.centrin.net.id/feedback/public/login',
+        type: 'POST',
+        dataType: 'json',
+        // headers: {
+        //     'Access-Control-Allow-Origin': '*',
+        //     'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Key'
+        // },
+        data: {
+          room_no: $('#username').val(),
+          email: $('#email').val()
+        }
+      }).success(function(data) {
+        if (data.success) {
+          doLogin();
+          // console.log($(this));
+          $(this).unbind('submit').submit()
+        } else {
+          alert('Room no is unavailable!');
+        }
+      });
+    });
+  });
+</script> -->
+</body>
+</html>
